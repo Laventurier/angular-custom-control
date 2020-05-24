@@ -1,0 +1,14 @@
+<label>
+  <div [innerHTML]="config.label"></div>
+  <input
+    class="form-control"
+    [ngClass]="styles"
+    autocomplete="off"
+    [type]="config.type"
+    [value]="value ? value : ''"
+    (input)="input($event.target.value)"
+    (focus)="focus($event.target.value)"
+    [placeholder]="config.placeholder"
+  />
+  <div class="text-danger" *ngIf="hasError" [innerHTML]="errors"></div>
+</label>
