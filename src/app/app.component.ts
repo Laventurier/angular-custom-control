@@ -14,11 +14,10 @@ export class AppComponent implements OnInit {
   }
 
   createFormControl() {
-    this.name = new FormControl("", [
+    this.name = new FormControl('', [
       Validators.required,
-      Validators.maxLength(2),
-      Validators.min(2),
-      Validators.max(20),
+      Validators.minLength(2),
+      Validators.maxLength(20),
     ]);
   }
 }

@@ -112,7 +112,7 @@ export class InputComponent implements OnInit, ControlValueAccessor, Validator {
     }
 
     if (!!errors?.minlength) {
-      return `Should be min ${errors.maxlength.requiredLength} symbols`;
+      return `Should be min ${errors.minlength.requiredLength} symbols`;
     }
 
     if (!!errors?.max) {
